@@ -673,6 +673,8 @@ esp_err_t uart_disable_pattern_det_intr(uart_port_t uart_num);
  */
 esp_err_t uart_enable_pattern_det_intr(uart_port_t uart_num, char pattern_chr, uint8_t chr_num, int chr_tout, int post_idle, int pre_idle);
 
+bool uart_tx_done(uart_port_t uart_num);
+
 #ifdef __cplusplus
 }
 #endif

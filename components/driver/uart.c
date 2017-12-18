@@ -1161,3 +1161,7 @@ esp_err_t uart_driver_delete(uart_port_t uart_num)
     }
     return ESP_OK;
 }
+
+bool uart_tx_done(uart_port_t uart_num) {
+    return (UART[uart_num]->status.txfifo_cnt == 0);
+}
